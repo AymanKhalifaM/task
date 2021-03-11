@@ -1,0 +1,36 @@
+<nav>
+  <div class="container">
+    <div class="nav-wrapper">
+      <a  class="brand-logo">
+        <img src="../../../assets/images/Group 2.svg" alt="">
+      </a>
+      <a href="#" data-target="mobile" class="sidenav-trigger"
+        ><i class="material-icons">menu</i></a
+      >
+      <ul class="right hide-on-med-and-down black-text">
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a routerLink="/programs" routerLinkActive="active">Programs</a>
+        </li>
+        <li><a routerLink="/schools" routerLinkActive="active">Schools</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <button class="btn waves-effect waves-light my_btn">login</button>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile">
+  <button class="btn waves-effect waves-light sidenav_btn">login</button>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/programs">Programs</a></li>
+  <li><a routerLink="/schools">Schools</a></li>
+  <li><a routerLink="/about">About</a></li>
+</ul>

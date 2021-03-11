@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="row main">
+      <form (ngSubmit)="onSubmit(f.value)" #f=ngForm>
+        <div class="col s12 m4">
+          <input
+            placeholder="What do you want to learn ?"
+            type="text"
+            class="first-input"
+            ngModel
+            id="learn"
+            name="learn"
+          />
+        </div>
+        <div class="col s12 m4">
+          <input
+            placeholder="Write or choose city"
+            type="text"
+            class="second-input"
+            ngModel
+            id="city"
+            name="city"
+          />
+        </div>
+        <div class="col s12 m4">
+          <button class="waves-effect waves-light btn" type="submit">button</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <app-prog-content [learn]="learn" [city]="city"></app-prog-content>
+</div>

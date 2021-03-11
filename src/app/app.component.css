@@ -1,0 +1,22 @@
+#header {
+  top: 103px;
+  left: -198.99993896484375px;
+  width: 591px;
+  height: 413px;
+  background: transparent url("../assets/images/Group1159.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 0.7;
+  position: fixed;
+  z-index: -1;
+}
+#header2 {
+  top: 700px;
+  left: 1420px;
+  width: 554px;
+  height: 297px;
+  background: transparent url("../assets/images/Group1386.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 0.7;
+  position: fixed;
+  z-index: -1;
+}

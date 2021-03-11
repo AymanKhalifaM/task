@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="col s11 offset-s1 m12 l3">
+    <div class="card white">
+      <div class="card-content black-text">
+        <form (ngSubmit)="onSubmit(f.value)" #f=ngForm>
+          <section>
+            <h4>city</h4>
+            <select class="select" [(ngModel)]="cityName" name="cityName" id="cityName">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="Paris">Paris</option>
+              <option value="London">London</option>
+              <option value="Berlin">Berlin</option>
+            </select>
+            <div class="chip" *ngIf="cityName">
+              {{cityName}}
+              <i class="close material-icons">close</i>
+            </div>
+          </section>
+          <section>
+            <h4>Program</h4>
+            <p>
+              <label>
+                <input class="with-gap" type="radio" />
+                <span>Bachelor</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" type="radio" />
+                <span>Master</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" type="radio" />
+                <span>MBA</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" type="radio" />
+                <span>BHD</span>
+              </label>
+            </p>
+          </section>
+          <section>
+            <h4>Field</h4>
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+            </select>
+            <div class="chip">
+              Tag
+              <i class="close material-icons">close</i>
+            </div>
+          </section>
+          <section>
+            <h4>school</h4>
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+            </select>
+          </section>
+          <section>
+            <h4>Language</h4>
+            <p>
+              <label>
+                <input type="radio" class="with-gap" />
+                <span>All</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" class="with-gap" checked/>
+                <span>English</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" class="with-gap" />
+                <span>French</span>
+              </label>
+            </p>
+          </section>
+          <section>
+            <h4>Sort</h4>
+            <p>
+              <label>
+                <input type="radio" class="with-gap" />
+                <span>Price: low to high</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="radio" class="with-gap" />
+                <span>Price: high to low</span>
+              </label>
+            </p>
+          </section>
+          <button class="waves-effect waves-light btn">button</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col s11 offset-s1 m12 l9 my-card">
+    <app-prog-list
+      [programs]="programs"
+      [city]="city"
+      [learn]="learn"
+    ></app-prog-list>
+  </div>
+</div>

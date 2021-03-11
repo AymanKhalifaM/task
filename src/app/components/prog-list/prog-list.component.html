@@ -1,0 +1,32 @@
+ <ul class="collection">
+      <a class="collection-item" *ngFor="let prog of programs |filter:learn | filter:city">
+        <div class="row">
+          <div class="col s12 m12 l3">
+            <img src="../../../assets/Nova SBE.png" alt="" class="my-img hide-on-med-and-down" />
+          </div>
+          <div class="col s12 m12 l9">
+            <div class="row">
+              <div class="col s12  m12 l12">
+                <span class="title">{{ prog.Name }}</span>
+              </div>
+              <div class="col s12 m12 l12">
+                <p class="prog-type">{{ prog.type }}</p>
+              </div>
+              <div class="col s12 m12 l2">
+                    <p class="prog-fee">TUITION FEE :</p>
+              </div>
+              <div class="col s12 m12 l3">
+                    <p class="fee-city">{{  '$'+prog.fee   }} per year</p>
+                    <!-- <p class="fee-city">{{  prog.fee | currency:'USD'  }} per year</p> -->
+              </div>
+              <div class="col s12 m12 l2">
+                    <p class="fee-city">{{prog.city }}</p>
+              </div>
+              <div class="col s12 m12 l4">
+                <button class="btn waves-effect waves-light">More info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </ul>

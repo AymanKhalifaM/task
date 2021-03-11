@@ -1,0 +1,53 @@
+nav {
+  background-color: inherit !important;
+  box-shadow: none !important;
+}
+nav ul {
+  margin-top: 15px;
+}
+
+nav ul a {
+  color: rgba(0, 0, 0, 1);
+  margin-right: 20px;
+  font-weight: bold;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+nav ul a:hover,
+ul li a.active {
+  background-color: inherit;
+  color: #1c85c8;
+}
+
+.brand-logo {
+  margin-top: 15px;
+}
+
+.my_btn {
+  background: #1c85c8 0% 0% no-repeat padding-box;
+  width: 103px;
+  height: 34px;
+  box-shadow: 0px 1px 10px #1c85c833;
+  border-radius: 5px;
+}
+
+.brand-logo {
+  position: fixed;
+  left: 20px;
+}
+
+.sidenav_btn {
+  background: #1c85c8 0% 0% no-repeat padding-box;
+  width: 103px;
+  height: 34px;
+  box-shadow: 0px 1px 10px #1c85c833;
+  border-radius: 5px;
+  margin-top: 20px;
+  left: 10px;
+}
+.material-icons {
+  color: #1c85c8;
+  position: fixed !important;
+  right: 20px;
+}
