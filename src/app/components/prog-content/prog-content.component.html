@@ -2,52 +2,39 @@
   <div class="col s11 offset-s1 m12 l3">
     <div class="card white">
       <div class="card-content black-text">
-        <form (ngSubmit)="onSubmit(f.value)" #f=ngForm>
+        <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
           <section>
             <h4>city</h4>
-            <select class="select" [(ngModel)]="cityName" name="cityName" id="cityName">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="Paris">Paris</option>
-              <option value="London">London</option>
-              <option value="Berlin">Berlin</option>
+            <select
+              class="select"
+              [(ngModel)]="cityName"
+              name="cityName"
+              id="cityName"
+            >
+              <option value="" selected *ngFor="let item of cities">
+                {{ item.name }}
+              </option>
             </select>
             <div class="chip" *ngIf="cityName">
-              {{cityName}}
+              {{ cityName }}
               <i class="close material-icons">close</i>
             </div>
           </section>
           <section>
             <h4>Program</h4>
-            <p>
+            <p *ngFor="let level of levels">
               <label>
                 <input class="with-gap" type="radio" />
-                <span>Bachelor</span>
+                <span>{{level}}</span>
               </label>
             </p>
-            <p>
-              <label>
-                <input class="with-gap" type="radio" />
-                <span>Master</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input class="with-gap" type="radio" />
-                <span>MBA</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input class="with-gap" type="radio" />
-                <span>BHD</span>
-              </label>
-            </p>
+          
           </section>
           <section>
             <h4>Field</h4>
             <select>
               <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 1</option>
+              <option *ngFor="let item of cities" value="1">{{ item }}</option>
             </select>
             <div class="chip">
               Tag
@@ -71,7 +58,7 @@
             </p>
             <p>
               <label>
-                <input type="radio" class="with-gap" checked/>
+                <input type="radio" class="with-gap" checked />
                 <span>English</span>
               </label>
             </p>
